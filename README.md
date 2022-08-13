@@ -1,8 +1,8 @@
 # AstroNvim Config Files :)
 
-## To use run the following commands:
+### To use run the following commands:
 
-Install neovim v0.7.2
+Install neovim v0.7.2<br />
 Find out how on this website: [GitHub - neovim/neovim - Installing Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 Clone the AstroNvim repo
