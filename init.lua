@@ -238,11 +238,11 @@ local config = {
       return config -- return final config table to use in require("null-ls").setup(config)
     end,
     treesitter = { -- overrides `require("treesitter").setup(...)`
-      ensure_installed = { "javascript", "lua", "markdown", "python" },
+      ensure_installed = { "javascript", "lua", "markdown", "python", "rust" },
     },
     -- use mason-lspconfig to configure LSP installations
     ["mason-lspconfig"] = { -- overrides `require("mason-lspconfig").setup(...)`
-      ensure_installed = { "sumneko_lua", "pyright", "tsserver" },
+      ensure_installed = { "sumneko_lua", "pyright", "tsserver", "rust-analyzer" },
     },
     -- use mason-tool-installer to configure DAP/Formatters/Linter installation
     ["mason-tool-installer"] = { -- overrides `require("mason-tool-installer").setup(...)`
