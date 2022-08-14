@@ -44,7 +44,7 @@ local config = {
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
     opt = {
-      relativenumber = false, -- sets vim.opt.relativenumber
+      relativenumber = true, -- sets vim.opt.relativenumber
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
