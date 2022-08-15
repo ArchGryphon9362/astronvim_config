@@ -170,6 +170,13 @@ local config = {
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+      ["<leader>tr"] = {
+        function()
+          local toggle_term_cmd = astronvim.toggle_term_cmd
+          toggle_term_cmd "evcxr"
+        end,
+        desc = "ToggleTerm rust",
+      },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
