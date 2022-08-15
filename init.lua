@@ -177,6 +177,13 @@ local config = {
         end,
         desc = "ToggleTerm rust",
       },
+      ["<leader>tb"] = {
+        function()
+          local toggle_term_cmd = astronvim.toggle_term_cmd
+          toggle_term_cmd "bacon"
+        end,
+        desc = "ToggleTerm bacon",
+      },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
