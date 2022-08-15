@@ -179,7 +179,21 @@ local config = {
       },
       ["<leader>tb"] = {
         function()
-          local toggle_term_cmd = astronvim.toggle_term_cmd
+          -- stolen from AstroNvim/AstroNvim - lua/core/utils/init.lua
+          local function toggle_term_cmd(term_details)
+            if type(term_details) == "string" then term_details = { cmd = term_details, hidden = true } end
+            local term_key = term_details.cmd
+            term_details.direction = "vertical"
+            if vim.v.count > 0 and term_details.count == nil then
+              term_details.count = vim.v.count
+              term_key = term_key .. vim.v.count
+            end
+            if astronvim.user_terminals[term_key] == nil then
+              astronvim.user_terminals[term_key] = require("toggleterm.terminal").Terminal:new(term_details)
+            end
+            astronvim.user_terminals[term_key]:resize(60)
+            astronvim.user_terminals[term_key]:toggle()
+          end
           toggle_term_cmd "bacon"
         end,
         desc = "ToggleTerm bacon",
