@@ -190,6 +190,7 @@ local config = {
           require("catppuccin").setup {}
         end,
       },
+      { "farmergreg/vim-lastplace" },
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
 
