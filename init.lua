@@ -191,7 +191,7 @@ local config = {
             if astronvim.user_terminals[term_key] == nil then
               astronvim.user_terminals[term_key] = require("toggleterm.terminal").Terminal:new(term_details)
             end
-            astronvim.user_terminals[term_key]:resize(60)
+            astronvim.user_terminals[term_key]:resize(100)
             astronvim.user_terminals[term_key]:toggle()
           end
           toggle_term_cmd "bacon"
