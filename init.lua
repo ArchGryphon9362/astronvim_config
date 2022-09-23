@@ -219,6 +219,7 @@ local config = {
         end,
       },
       { "farmergreg/vim-lastplace" },
+      { "othree/eregex.vim" },
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
 
